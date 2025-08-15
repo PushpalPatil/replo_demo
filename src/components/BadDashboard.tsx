@@ -2,7 +2,11 @@ import { currentTest, revenueImpactCalculation } from '@/data/mockData';
 import BadMetricsTable from './BadMetricsTable';
 import BadTimelineTable from './BadTimelineTable';
 
-export default function BadDashboard() {
+interface BadDashboardProps {
+  onToggleVersion: () => void;
+}
+
+export default function BadDashboard({ onToggleVersion }: BadDashboardProps) {
   return (
     <div className="bg-gray-100 min-h-screen p-1">
       <div className="bg-white border border-gray-300 m-1">
@@ -61,7 +65,10 @@ export default function BadDashboard() {
           <BadTimelineTable />
 
           <div className="mt-2 text-center">
-            <button className="bg-red-600 text-white px-8 py-3 text-lg font-bold border border-red-700">
+            <button 
+              onClick={onToggleVersion}
+              className="bg-red-600 text-white px-8 py-3 text-lg font-bold border border-red-700 hover:bg-red-700 transition-colors"
+            >
               MAKE THIS BETTER
             </button>
           </div>
