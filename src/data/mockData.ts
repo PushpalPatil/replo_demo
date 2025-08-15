@@ -129,5 +129,52 @@ export const revenueImpactCalculation = {
       confidenceInterval: {
             lower: 8.2,
             upper: 22.6
+      },
+      revenuePerVisitor: {
+            control: 4.34,
+            variant: 5.05,
+            lift: 16.4
+      },
+      statisticalPower: 0.94,
+      pValue: 0.003,
+      sampleSizeProgress: {
+            current: 31164,
+            required: 35000
+      },
+      winnerPrediction: {
+            probability: 97.2,
+            timeToSignificance: "2 days"
+      }
+};
+
+// Enhanced segmentation data
+export const segmentationData = {
+      byDevice: {
+            desktop: {
+                  control: { visitors: 7821, conversions: 587, revenue: 35940 },
+                  variant: { visitors: 7760, conversions: 721, revenue: 43890 }
+            },
+            mobile: {
+                  control: { visitors: 7822, conversions: 522, revenue: 31950 },
+                  variant: { visitors: 7761, conversions: 568, revenue: 34450 }
+            }
+      },
+      byTrafficSource: {
+            organic: {
+                  control: { visitors: 4692, conversions: 333, revenue: 20350 },
+                  variant: { visitors: 4656, conversions: 387, revenue: 23520 }
+            },
+            paid: {
+                  control: { visitors: 6234, conversions: 445, revenue: 27230 },
+                  variant: { visitors: 6187, conversions: 532, revenue: 32340 }
+            },
+            social: {
+                  control: { visitors: 2845, conversions: 198, revenue: 12110 },
+                  variant: { visitors: 2823, conversions: 227, revenue: 13790 }
+            },
+            email: {
+                  control: { visitors: 1872, conversions: 133, revenue: 8200 },
+                  variant: { visitors: 1855, conversions: 143, revenue: 8690 }
+            }
       }
 };
